@@ -1,0 +1,942 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    /* background-color: white; */
+    background-image: url(../assets/img/imagen\ mosaico\ 3.png);
+    height: auto;
+    font-family: "Sriracha-Regular";
+    width: 100vw;
+}
+@font-face{
+    font-family: "Montserrat-Light";
+    src:url(../assets/font/Montserrat-Light.ttf)
+}
+
+@font-face{
+    font-family: "Sriracha-Regular";
+    src:url(../assets/font/Sriracha-Regular.ttf)
+}
+
+h1, h2, h3, h4{
+    font-family: "Montserrat-Light";
+}
+
+/*AQUI EMPIEZA EL HEADER*/
+.contenedor_completo {
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: 1fr;
+  grid-template-rows: 50px 1fr 500px;
+  gap: 0px 0px;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+}
+
+.header { 
+    width: 100vw;
+	height: 50px;
+	background-color: black;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	z-index: 100;
+}
+
+.contenedor-header{
+	width: 98%;
+	margin: auto;
+	display: table;
+}
+
+.logo{
+    height: 40px;
+    float: left;
+    margin: 5px 10px;
+    border-radius: 50%;
+}
+
+#menu-bar{
+    display: none;
+    }
+
+.header label{
+        float: right;
+        font-size: 28px;
+        margin: 6px 30px;
+        cursor: pointer;
+        color: white;
+    }
+
+nav .menu{
+	position:absolute;
+    list-style: none;
+	top: 50px;
+	left: 0px;
+	width: 100%;
+	height: 100vh;
+	background-color: black;
+	transition: all 0.5s;
+	transform: translateX(-100%);
+}
+
+
+
+nav ul li a{
+	display: block;
+	color: white;
+	height: 50px;
+	text-decoration: none;
+	padding: 15px;
+	border-bottom: solid rgba(253,253,253,1.00) 1px;	
+}
+nav .menu a:hover{
+	background-color: rgba(162,162,162,1.00);
+}
+#menu-bar:checked ~ nav .menu{
+transform: translateX(0%);	
+padding-left: 0px;
+}
+
+
+/*HASTA AQUI LLEGA EL HEADER*/
+
+.main { 
+    grid-area: main; 
+    width: 100vw;
+}
+
+/*Aqui empieza el primer container*/
+
+.container_vet{
+    border-bottom: 2px solid black;
+}
+
+.imagen-carousel{
+    height: 30vh;
+    margin: 5px 0 ;
+}
+
+.contenedor_deimagenes{
+    border-right: 2px solid black;
+}
+
+.contenedor_detexto p{
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.boton_contacto1{
+    width: 150px;
+    height: 32px;
+    font-family: "Montserrat-Light";
+    background-color: #1da1f2;
+}
+
+.boton_contacto1 a{
+    text-decoration: none;
+    color: black;
+}
+
+.contenedor-gif img{
+    width: 80px;
+    height: 80px;
+    margin: 10px auto;
+} 
+
+/*Aqui termina el primer container*/
+
+/*Aqui empieza el 1 subtitulo*/
+
+.subtitulo_veterinario{
+    width: 100vw;
+    height: 50px;
+    margin: 0;
+    color: black;
+    font-size: 28px;
+    line-height: 50px;
+    text-align: center;
+    border-bottom: 2px solid black;
+    font-weight: bold;
+    background: radial-gradient(ellipse, white, pink, blueviolet);
+}
+
+/*Aqui termina el 1 subtitulo*/
+
+/*Aqui empieza el 2 container*/
+
+/* .container_veteri2{
+    width: 50%;
+    height: 350px;
+    border: solid 2px black;
+
+} */
+
+.container_veteri2 h3{
+    text-align: center;
+    margin: 10px 0px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.container_veteri2 img{
+    width: 70%;
+    margin: 0% 15%;
+    height: 200px;
+}
+
+.container_veteri2 p{
+    width: 70%;
+    margin: 0% 15%;
+    margin-top: 5px;
+    height: auto;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+/*Aqui termina el 2 container*/
+
+
+
+/* .container_veteri3{
+    width: 50%;
+    height: 350px;
+    border: solid 2px black;
+} */
+
+.container_veteri3 img{
+    width: 70%;
+    margin: 0% 15%;
+    margin-top: 20px;
+    height: 200px;
+}
+
+.container_veteri3 p{
+    width: 70%;
+    margin: 0% 15%;
+    margin-top: 5px;
+    height: auto;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.atajoinicio{
+    height: 50px;
+    width: 120px;
+    margin: 20px auto;
+}
+
+.atajoinicio a{
+    text-decoration: none;
+    color: black;
+}
+
+
+.atajoinicio h5{
+    line-height: 50px;
+    color: black;
+    text-align: center;
+}
+
+/*Aqui empieza nosotros*/
+
+/* 
+.container-main {  
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 2px 2px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "contenidotexto-nosotros imagen-denosotros"
+        "imaden-devision contenidotexto-vision"
+        "contenidotexto-mision imagen-demision";
+    justify-content: center; 
+    align-content: center; 
+    justify-items: center; 
+    align-items: center; 
+  }
+
+.contenidotexto-nosotros{
+    grid-area: contenidotexto-nosotros;
+    width: 100%;
+    height: 100%;
+    background-color: #1da1f2;
+    border: 1px solid black;
+    
+  }
+
+.contenidotexto-nosotros h2{
+    margin-top: 30px;
+    font-size: 28px;
+    text-align: center;
+}
+
+.contenidotexto-nosotros p{
+    margin: 0px 90px;
+    font-size: 16px;
+}
+
+
+.imagen-denosotros { 
+    grid-area: imagen-denosotros;
+    width: 100%;
+    height: 100%; 
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    justify-content: center; 
+    align-content: center; 
+    justify-items: center; 
+    align-items: center; 
+}
+
+.imagen-denosotros img{
+    height: 30vh;
+    margin: 20px 0;
+    border-radius: 10px;
+}
+
+.imaden-devision { 
+    grid-area: imaden-devision; 
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    justify-content: center; 
+    align-content: center; 
+    justify-items: center; 
+    align-items: center;
+}
+
+.imaden-devision img{
+    height: 250px;
+    width: 600px;
+    margin: 20px 0;
+    border-radius: 10px;
+}
+
+.contenidotexto-vision { 
+    grid-area: contenidotexto-vision; 
+    width: 100%;
+    height: 100%;
+    background-color: #1da1f2;
+    border: 1px solid black;
+}
+
+.contenidotexto-vision h2{
+    margin-top: 70px;
+    font-size: 28px;
+    text-align: center;
+}
+
+.contenidotexto-vision p{
+    margin: 0px 90px;
+    font-size: 16px;
+}
+
+.contenidotexto-mision { 
+    grid-area: contenidotexto-mision;
+    width: 100%;
+    height: 100%;
+    background-color: #1da1f2;
+    border: 1px solid black;
+}
+
+.contenidotexto-mision h2{
+    margin-top: 70px;
+    font-size: 28px;
+    text-align: center;
+}
+
+.contenidotexto-mision p{
+    margin: 0px 90px;
+    font-size: 16px;
+}
+
+.imagen-demision { 
+    grid-area: imagen-demision; 
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    justify-content: center; 
+    align-content: center; 
+    justify-items: center; 
+    align-items: center;
+}
+
+.imagen-demision img{
+    height: 250px;
+    width: 600px;
+    margin: 20px 0;
+    border-radius: 10px;
+} */
+
+/*Aqui termina nosotros*/
+
+
+/*Aqui empieza servicios*/
+
+.main-servicio {  display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 1fr 1fr 1fr 70px;
+    gap: 0px 2px;
+    grid-auto-flow: row;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    grid-template-areas:
+      "subtitulo-servicio"
+      "servicio-baño"
+      "servicio-clinicaveterinaria"
+      "servicio-hospedaje"
+      "botoncontacto-servicio";
+  }
+
+.subtitulo-servicio{
+    grid-area: subtitulo-servicio;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse, white, pink, blueviolet);
+  }
+
+.subtitulo-servicio h2{
+    width: 100%;
+    height: 50px;
+    color: black;
+    font-size: 28px;
+    line-height: 50px;
+    text-align: center;
+    border-bottom: 1px solid black;
+    font-weight: bold;
+}
+
+.servicio-baño { 
+    grid-area: servicio-baño;
+    width: 100%; 
+    height: 100%;
+    margin-top: 20px;
+}
+.servicio-clinicaveterinaria { 
+    grid-area: servicio-clinicaveterinaria; 
+    width: 100%; 
+    height: 100%;
+    margin-top: 20px;
+}
+
+.servicio-hospedaje { 
+    grid-area: servicio-hospedaje; 
+    width: 100%; 
+    height: 100%;
+    margin-top: 20px;
+}
+
+.container_item5 h3{
+    text-align: center;
+    font-weight: bold;
+}
+
+.container_item5 img{
+    margin: 0px 1%;
+    width: 98%;
+    height: 200px;
+}
+
+.container_item5 ul{
+    padding-top: 10px;
+    margin: 0px 5%;
+}
+
+.container_item5 li{
+    width: 90%;
+    height: auto;
+    font-size: 14px;
+}
+
+.botoncontacto-servicio { 
+    grid-area: botoncontacto-servicio; 
+}
+
+.botones{
+    text-align: center;
+    margin: 40px auto;
+}
+
+.button_contacto{
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: dodgerblue;
+    color: white;
+}
+
+.products{
+    background-image: url(../assets/img/fondos.png);
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+}
+
+
+
+.container_producto{
+    height: auto;
+    max-height: 700px;
+}
+
+
+/*Aqui termina servicio*/
+
+/*Aqui empieza productos*/
+
+.main-productos {  
+    display: grid;
+    /* grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px 4fr 1fr;
+    gap: 0px 2px;
+    grid-auto-flow: row;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    grid-template-areas:
+      "subtitulo-productos subtitulo-productos"
+      "producto-farmacia producto-petshop"
+      "botoncontacto-producto botoncontacto-producto"; */
+  }
+
+/* .subtitulo-productos { 
+    grid-area: subtitulo-productos; 
+    width: 100%;
+    height: 100%;
+    
+} */
+
+/* .producto-farmacia { 
+    grid-area: producto-farmacia; 
+}
+
+.producto-petshop { 
+    grid-area: producto-petshop; 
+} */
+
+.subtitulo-productos h2{
+    width: 100vw;
+    height: 50px;
+    margin: 0;
+    color: black;
+    font-size: 28px;
+    line-height: 50px;
+    text-align: center;
+    border-bottom: 2px solid black;
+    font-weight: bold;
+    background: radial-gradient(ellipse, white, pink, blueviolet);
+}
+
+.container_item6{
+    min-height: 44vh; 
+    border: solid 1px black;
+    margin-top: 20px;
+}
+
+.container_item6 img{
+    width: 70%;
+    margin: 0 15%;
+    margin-top: 2vh;
+    height: 200px;
+}
+
+.container_item6 h3{
+    margin-top: 0px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.container_item6 p{
+    margin: 0 15%;
+    width: 70%;
+    font-size: 14px;
+}
+
+/* .botoncontacto-producto { 
+    grid-area: botoncontacto-producto; 
+} */
+
+.botones a{
+    text-decoration: none;
+    color: white;
+}
+
+/*Aqui termina productos*/
+
+/*Aqui empieza contacto*/
+
+.main-contacto {  display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 90px 90px 90px 1fr 1fr;
+    gap: 2px 2px;
+    grid-auto-flow: row;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    grid-template-areas:
+      "subtitulo-contacto"
+      "direccion-contacto"
+      "email-contacto"
+      "numero-contacto"
+      "formulario-contacto"
+      "mapa-contacto";
+  }
+
+.subtitulo-contacto { 
+    grid-area: subtitulo-contacto;
+    width: 100%;
+    height: 100%; 
+    background: radial-gradient(ellipse, white, pink, blueviolet);
+}
+
+.subtitulo-contacto h2{
+    width: 100%;
+    height: 50px;
+    color: black;
+    font-size: 28px;
+    line-height: 50px;
+    text-align: center;
+    border-bottom: 1px solid black;
+    font-weight: bold;
+}
+
+.direccion-contacto { 
+    grid-area: direccion-contacto; 
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    color: white;
+}
+
+  
+.email-contacto { 
+    grid-area: email-contacto; 
+    width: 100%;
+    height: 100%;
+    background-color: #696969;
+    color: white;
+}
+  
+.numero-contacto { 
+    grid-area: numero-contacto; 
+    width: 100%;
+    height: 100%;
+    background-color: #C0C0C0;
+    color: white;
+}
+
+.container_item7{
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+}
+
+.container_item7 h4{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.container_item7 p{
+    width: 80%;
+    margin-top: 10px;
+    margin: 0% 10%;
+    font-size: 13px;
+    text-align: center;
+}
+
+  
+.formulario-contacto { 
+    grid-area: formulario-contacto; 
+    width: 100%;
+    height: 100%;
+}
+  
+.mapa-contacto { 
+    grid-area: mapa-contacto; 
+    width: 100%;
+    height: 100%;
+}
+
+
+.container_item8{
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    justify-items: center;
+    border: solid 1px black;
+}
+
+.container_item8 h3{
+    width: 100%;
+    text-align: center;
+    margin: 10px auto;
+    font-weight: bold;
+}
+
+.container_item8 form{
+    margin: 0% 10%;
+    width: 80%;
+    height: auto;
+    font-size: 14px;
+}
+
+.labels{
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.inputs{
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.map_ubicacion{
+    width: 100%;
+}
+
+.map_ubicacion iframe{
+    width: 80%;
+    height: 350px;
+    margin: 0% 10%;
+}
+
+/*Aqui termina contacto*/
+
+.footer{
+    grid-area: footer; 
+    width: 100vw;
+    padding: 0px;
+    margin-top: 0;
+    background-color: black;
+}
+
+.footer h5{
+    margin: 0 10px;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 16px;
+    color: white;
+}
+
+
+.footer_container{
+    /* width: 100%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+.icon {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin: 20px;
+    border-radius: 50%;
+    transition: all .8s;
+    cursor: pointer;
+}
+.icon:hover {
+    background-color: #e60073;
+    box-shadow:  0 0 20px #e60073 ;
+}
+.icon:hover:nth-child(2) {
+    background-color: #1877f2;
+    box-shadow:  0 0 20px #1877f2;
+}
+.icon:hover:nth-child(3) {
+    background-color: #25d366;
+    box-shadow: 0 0 20px #25d366 ;
+}
+
+.icon:hover:nth-child(4) {
+    background-color: #1da1f2;
+    box-shadow:  0 0 20px #1da1f2 ;
+}
+
+.icon i {
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 1.7rem;
+}
+
+svg circle {
+    stroke-dasharray: 150;
+    transition: all .8s ease-in-out;
+}
+
+.icon:hover circle {
+    stroke-dasharray: 220;
+}
+
+
+@media (min-width:240px){
+    .contenedor_completo {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 50px 1fr 380px;
+        gap: 0px 0px;
+        grid-template-areas:
+          "header"
+          "main"
+          "footer";
+      }
+    
+    
+    .footer{
+        grid-area: footer; 
+        height: 100%;
+    }
+}
+
+@media (min-width:360px){
+    .contenedor_completo {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 50px 1fr 240px;
+        gap: 0px 0px;
+        grid-template-areas:
+          "header"
+          "main"
+          "footer";
+      }
+    
+    .footer{
+        grid-area: footer; 
+        margin-bottom: 0px;
+        padding: 0px;
+    }
+}
+
+
+@media (min-width:576px){
+    .main-servicio {  display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 50px 4fr 1fr;
+        gap: 0px 2px;
+        grid-auto-flow: row;
+        justify-content: center;
+        align-content: center;
+        justify-items: center;
+        align-items: center;
+        grid-template-areas:
+          "subtitulo-servicio subtitulo-servicio subtitulo-servicio"
+          "servicio-baño servicio-clinicaveterinaria servicio-hospedaje"
+          "botoncontacto-servicio botoncontacto-servicio botoncontacto-servicio";
+      }
+    
+    .subtitulo-servicio{
+        grid-area: subtitulo-servicio;
+      }
+    
+    .servicio-baño { 
+        grid-area: servicio-baño;
+    }
+    .servicio-clinicaveterinaria { 
+        grid-area: servicio-clinicaveterinaria; 
+    }
+    
+    .servicio-hospedaje { 
+        grid-area: servicio-hospedaje; 
+    }
+    
+    .botoncontacto-servicio { 
+        grid-area: botoncontacto-servicio; 
+    }
+
+    .main-contacto {  display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 50px 90px 1fr;
+        gap: 2px 2px;
+        grid-auto-flow: row;
+        justify-content: center;
+        align-content: center;
+        justify-items: center;
+        align-items: center;
+        grid-template-areas:
+          "subtitulo-contacto subtitulo-contacto subtitulo-contacto subtitulo-contacto subtitulo-contacto subtitulo-contacto"
+          "direccion-contacto direccion-contacto email-contacto email-contacto numero-contacto numero-contacto"
+          "formulario-contacto formulario-contacto formulario-contacto mapa-contacto mapa-contacto mapa-contacto";
+      }
+    
+    .subtitulo-contacto { 
+        grid-area: subtitulo-contacto;
+    }
+    
+    .direccion-contacto { 
+        grid-area: direccion-contacto; 
+    }
+    
+      
+    .email-contacto { 
+        grid-area: email-contacto; 
+    }
+      
+    .numero-contacto { 
+        grid-area: numero-contacto; 
+    }
+    
+      
+    .formulario-contacto { 
+        grid-area: formulario-contacto; 
+    }
+      
+    .mapa-contacto { 
+        grid-area: mapa-contacto; 
+    }
+}
+
+
+
+
+@media (min-width:1024px){
+	
+	.contenedor-header{
+		width: calc(100vw - 40px);
+	}
+
+    nav .menu{
+		position: static;
+		width: auto;
+		height: auto;
+		transform: translateX(0%);
+		float:right;
+		display: flex;
+	}
+	header label{
+		display: none;
+	}
+	.menu a{
+		border:none;
+	}	
+    .subtitulo_veterinario{
+        font-size: 30px;
+    }
+}
+
+
+
+
